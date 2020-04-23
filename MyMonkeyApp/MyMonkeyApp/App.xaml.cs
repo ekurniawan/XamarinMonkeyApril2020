@@ -1,6 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 
 namespace MyMonkeyApp
 {
@@ -13,8 +17,11 @@ namespace MyMonkeyApp
             MainPage = new MainPage();
         }
 
+        //menambahkan app center
         protected override void OnStart()
         {
+            AppCenter.Start("android=af34aac7-6c7e-483e-8711-1d140781378e;",
+                  typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
