@@ -20,7 +20,7 @@ namespace MyMonkeyApp
         //menambahkan app center
         protected override void OnStart()
         {
-            AppCenter.Start("android=af34aac7-6c7e-483e-8711-1d140781378e;",
+            AppCenter.Start("android=156d2bf6-8ecb-4577-b534-95363906358b;",
                   typeof(Analytics), typeof(Crashes));
         }
 
